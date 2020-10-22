@@ -8,6 +8,6 @@ namespace _24Hour.Data
 {
     public class Comment
     {
-        //test comment
+        //test test comment
     }
 }

@@ -1,21 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _24Hour.Data
+namespace _24Hour.Models
 {
-    public class Comment
+    class Edit
     {
-        [Key]
         public int Id { get; set; }
-        [Required]
+        public string Title { get; set; }
         public string Text { get; set; }
-        [Required]
         public User Author { get; set; }
-        [Required]
         public Post CommentPost { get; set; }
     }
+
+    //Post
+
+
+    //Comment
 }

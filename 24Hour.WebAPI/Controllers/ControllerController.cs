@@ -20,14 +20,14 @@ namespace _24Hour.WebAPI.Controllers
             return Service;
         }
     }
-    public IHttpActionResult Post(Create note)
+    public IHttpActionResult Post(Create post)
     {
         if (!ModelState.IsValid)
             return BadRequest(ModelState);
 
         var service = CreateService();
 
-        if (!service.CreateNote(note))
+        if (!service.CreatePost(post))
             return InternalServerError();
 
         return Ok();

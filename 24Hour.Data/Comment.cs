@@ -8,6 +8,9 @@ namespace _24Hour.Data
 {
     public class Comment
     {
-        //test test comment
+        public int Id { get; set; }
+        public string Text { get; set; }
+        public User Author { get; set; }
+        public Post CommentPost { get; set; }
     }
 }

@@ -9,6 +9,6 @@ namespace _24Hour.Data
     public class Like
     {
         public Post LikedPost { get; set; }
-        public User Liker { get; set; }
+        public Owner Liker { get; set; }
     }
 }

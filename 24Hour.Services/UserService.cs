@@ -23,7 +23,7 @@ namespace _24Hour.Services
         public bool CreateUser(UserCreate model)
         {
             var entity =
-                new User()
+                new Owner()
                 {
                     Name = model.Name,
                     Email = model.Email
@@ -66,7 +66,7 @@ namespace _24Hour.Services
                 var entity =
                     ctx
                         .Users
-                        .Single(e => id && e.Id == _userId);
+                        .Single(e => e.Id == _userId);
                 return
                     new UserDetail
                     {

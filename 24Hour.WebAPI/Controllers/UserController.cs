@@ -45,7 +45,7 @@ namespace _24Hour.WebAPI.Controllers
         //    return Ok("Done");
         //}
         [HttpPost]
-        public IHttpActionResult Create(User userToAdd)
+        public IHttpActionResult Create(Owner userToAdd)
         {
             _context.Users.Add(userToAdd);
 
@@ -69,7 +69,7 @@ namespace _24Hour.WebAPI.Controllers
         [HttpGet]
         public IHttpActionResult Index()
         {
-            List<User> usersInDB = _context.Users.ToList();
+            List<Owner> usersInDB = _context.Users.ToList();
             return Ok(usersInDB);
         }
 
@@ -86,7 +86,7 @@ namespace _24Hour.WebAPI.Controllers
         [Route("{id}")] // Route lets us customise what the endpoint(last part of the url) is to get/activate this method. For this one we want to use the id
         public IHttpActionResult GetByID(int id)    
         {
-            User requestedUser = _context.Users.Find(id); 
+            Owner requestedUser = _context.Users.Find(id); 
               
             if (requestedUser == null)    
             {
@@ -111,9 +111,9 @@ namespace _24Hour.WebAPI.Controllers
         //    return Ok("Updated");
         //}
         [HttpPut]
-        public IHttpActionResult Update(User updatedUser)
+        public IHttpActionResult Update(Owner updatedUser)
         {
-            User requestedUser = _context.Users.Find(updatedUser);
+            Owner requestedUser = _context.Users.Find(updatedUser);
             if (requestedUser == null)
             {
                 return BadRequest("Not found");
@@ -145,7 +145,7 @@ namespace _24Hour.WebAPI.Controllers
         [Route("{id}")]
         public IHttpActionResult Delete([FromUri] int id)
         {
-            User requestedUser = _context.Users.Find(id);
+            Owner requestedUser = _context.Users.Find(id);
 
             if (requestedUser == null)
             {
